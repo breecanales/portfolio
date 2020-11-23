@@ -7,6 +7,7 @@
 	<meta name="Description" content="I am a new web designer">
 	<link rel="stylesheet" href="../styles.css">
 	<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+	
 </head>
 
 <body>
@@ -47,33 +48,143 @@
 <!-- Form -->
 	<form class="form-style-9">
 	<ul>
-	<li>
-		<input type="text" name="field1" class="field-style field-split align-left" placeholder="Name" />
-		<input type="email" name="field2" class="field-style field-split align-right" placeholder="Email" />
+		
+	<li class="half-width">
+		<label class="required" for="name">Name</label>
+		<input id="name" required type="text" name="field1" class="field-style field-split align-left" placeholder="Name" />
+	</li>
+		
+	<li class="half-width">	
+		<label class="required" for="email">Email</label>
+		<input id="email" required type="email" name="field2" class="field-style field-split align-right" placeholder="Email" />
 
 	</li>
-	<li>
-		<input type="text" name="field3" class="field-style field-split align-left" placeholder="Phone" />
-		<input type="url" name="field4" class="field-style field-split align-right" placeholder="Website" />
+		
+	<li class="half-width">
+		<label for="phone">Phone</label>
+		<input id="phone" type="text" name="field3" class="field-style field-split align-left" placeholder="Phone" />
 	</li>
-	<li>
-	<input type="text" name="field3" class="field-style field-full align-none" placeholder="Subject" />
+		
+	<li class="half-width">
+		<label for="website">Website</label>
+		<input id="website" type="url" name="field4" class="field-style field-split align-right" placeholder="Website" />
 	</li>
-	<li>
-	<textarea name="field5" class="field-style" placeholder="Message"></textarea>
+		
+	<li class="full-width">
+		<label for="subject">Subject</label>
+		<input id="subject" type="text" name="field3" class="field-style field-full align-none" placeholder="Subject" />
 	</li>
+		
+	<li class="full-width">
+		<label class="required" for="message">Message</label>
+		<textarea id="message"  required name="field5" class="field-style" placeholder="Message"></textarea>
+	</li>
+	
 	<li>
-	<input type="submit" value="Send Message" />
+		<input type="submit" value="Send Message" />
 	</li>
 	</ul>
 	</form>
 
 <!-- End of Form -->
 	
+<!-- CSS sprite -->
+	<style>
+    ul.menu {
+        list-style-type: none;
+    }
+    ul.menu li {
+        padding: 5px;
+        font-size: 16px;
+        font-family: "Trebuchet MS", Arial, sans-serif;
+    }
+    ul.menu li a {
+        height: 50px;
+        line-height: 50px;
+        display: inline-block;
+        padding-left: 70px; /* To sift text off the background-image */
+        color: #808080;text-decoration: none;
+        background: url("../../../shield_sprite.png")no-repeat; /* As all link share the same background-image */
+    }
+		
+    ul.menu li.shield1 a {
+        background-position: 0 0;
+    }
+    ul.menu li.shield2 a {
+        background-position: 0 -50px;
+    }
+    ul.menu li.shield3 a {
+        background-position: 0 -100px;
+    }
+    ul.menu li.shield4 a {
+        background-position: 0 -150px;
+    }
+    
+    ul.menu li.shield1 a:hover {
+        background-position: 0 -50px;
+    }
+    ul.menu li.shield2 a:hover {
+        background-position: 0 -100px;
+    }
+    ul.menu li.shield3 a:hover {
+        background-position: 0 -150px;
+    }
+    ul.menu li.shield4 a:hover {
+        background-position: 0 -50px;
+    }
+    
+</style>
+	
+		<ul class="menu">
+			<li class="shield1"><a href="#">Shield PMS 2607C</a></li>
+			<li class="shield2"><a href="#">Shield PMS 2587C</a></li>
+			<li class="shield3"><a href="#">Shield PMS 2592C</a></li>
+			<li class="shield4"><a href="#">Shield PMS 2577C</a></li>
+		</ul>
+	
+<!-- CSS sprite end -->	
+	
+<!-- canvas element -->	
+	<p>Image:</p>
+	<img id="shield" src="../img/shield-img.jpg" alt="purple shield" width="200" height="300">
+
+	<p>Canvas to fill:</p>
+	<canvas id="myCanvas" width="275" height="325"
+	style="border:1px solid #d3d3d3;">
+	Your browser does not support the HTML canvas tag.</canvas>
+
+	<p><button onclick="myCanvas()">Try it</button></p>
+
+	<script>
+	function myCanvas() {
+	  var c = document.getElementById("myCanvas");
+	  var ctx = c.getContext("2d");
+	  var img = document.getElementById("shield");
+	  ctx.drawImage(img,10,10);
+	}
+	</script>
+	
+
+<!-- end canvas element -->	
+	
+<!-- Audio element -->	
+	<figure>
+    <figcaption>Listen to my favorite song:</figcaption>
+    <br>
+	<audio
+        controls
+        src="../audio/Negro.mp3">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+</figure>
+
+	
+<!-- end Audio element -->		
 	
 	
 	
-	
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	
 <!-- Footer -->
 	<div class="navbar">
