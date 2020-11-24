@@ -11,9 +11,9 @@
 
 <body>
 <!-- Beginning of Navigation -->	
-	<header class="header">
+	<header class="header clearfix">
 		<!-- My profile picture -->
-		<div class="wrap">
+	<div class="wrap clearfix">
 			<figure class="logo-wrap">
 				<img class="logo" src="../img/breeProfile.jpg" alt="Brenda's profile picture">	
 			</figure>
@@ -25,10 +25,17 @@
 			<!-- Nav bar -->
 			<nav class="main-nav">
 				<ul>
-					<li><a href="../index.html" target="_blank">Home</a></li>
-					<li><a href="../about/index.html" target="_blank">About</a></li>
-					<li><a href="../feature/index.html" target="_blank">Feature</a></li>
-					<li><a href="../contact/index.html" target="_blank">Contact</a></li>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="../about/index.html">About</a>
+						<ul class="sub-menu">
+							<li><a href="../about/index.html#content">Content</a></li>
+							<li><a href="../about/index.html#wireframes">Wireframes</a></li>
+							<li><a href="../about/index.html#walkthrough">Walkthrough</a></li>
+							<li><a href="../about/index.html#credits">Credits</a></li>
+						</ul>
+					</li>
+					<li><a href="../feature/index.html">Feature</a></li>
+					<li><a href="../contact/index.html">Contact</a></li>
 				</ul>
 			</nav>
 			<!-- Social Media -->
@@ -45,57 +52,72 @@
 <!-- End of Navigation -->	
 	
 <!-- Beginning of About-->
-	<div class="about-page-intro about-page-contents">
-    	<p>Graphic design professional with creativity, energy, and endurance. Print and digital background to deliver results in a marketing atmosphere. Keeps up with new technology, design, and trends. Detail oriented and type-A personality with organization skills to keep projects on track along with vendors, co-workers, and printers with a team-player attitude.<br>Cheerful personality that brings in zest and happiness to any fast-paced and demanding work atmosphere.</p>
-    </div>	
-
+	
 <!-- Beginning of Content Map-->	
 	<section class="content-map about-page-contents">
-		<div class="content-title">
+		<div id="content" class="content-title">
 			<h2>Content Map</h2>
 		</div>
 		<div class="content">
-			<img id="content-map-image" src="../img/example-content-map.png">
+			<img id="content-map-image" src="../img/example-content-map.jpg">
 		</div>
 		
-		<hr>
-		
-		<div class="content-title">
+		<div id="wireframes" class="content-title">
 			<h2>Wireframes</h2>
-			<p>Homepage</p>
 		</div>
 		<div class="content">
-			<img id="wireframe-image" src="../img/wireframe-homepage.png">
+			<img id="wireframe-image" src="../img/wireframe-brendacanales.jpg">
 		</div>
 		
-		<div class="content-title">
-			<p>About</p>
-		</div>
-		<div class="content">
-			<img id="wireframe-image" src="../img/wireframe-about.png">
-		</div>
-		
-		<div class="content-title">
-			<p>Feature</p>
-		</div>
-		<div class="content">
-			<img id="wireframe-image" src="../img/wireframe-feature.png">
-		</div>
-		
-		<div class="content-title">
+		<div id="walkthrough" class="content-title">
 			<h2>Walkthrough</h2>
 		</div>
 		<div class="content-walkthrough">
-			<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-			<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+			<p>Required items for this project:</p>
+				<ol>
+					<li>Content map: I generated it with the Mind Map tool (see below)</li>
+					<li>Wireframe: I generated this using the online tool www.wireframe.cc (see below)</li>
+					<li>HTML 5: the structure uses HTML 5 tags such as nav, section and footer</li>
+					<li>CSS for layout: the site uses basic CSS for all layouts</li>
+					<li>Top four sections are: Home, About, Samples and Contact</li>
+					<li>I created the favicon for the site using Photoshop</li>
+					<li>Glyphs: see sample #4</li>
+					<li>Video element: see sample #2</li>
+					<li>Audio element: see sample #6</li>
+					<li>Slideshow: see homepage (used yii2sly)</li>
+					<li>Use a web font: every h1 tag uses a web font from Google (also see example #1)</li>
+					<li>HTML 5 canvas element: see example #3 (drew a traffic cone)</li>
+					<li>HTML 5 form validation: see example #7</li>
+					<li>JSON implementation: see example #5 (schools I've attended overlaid on a Google Map)</li>
+					<li>Server-side persistent storage: all the samples are stored in a SQLite database</li>
+					<li>Data visualization: used Google services to show three gauges (see example #9)</li>
+					<li>Asynchronous updates: see example #10</li>
+					<li>Client-side scripting: used highlight.js to format all code examples; also see example #8</li>
+					<li>Server-side scripting: this entire application is built with the PHP-driven Yii2 framework</li>
+					<li>Credits section: see below</li>
+					<li>Walkthrough: this is it!</li>
+				</ol>
 		</div>
 		
 		<div id="credits" class="content-title">
 			<h2>Credits</h2>
 		</div>
 		<div class="content-credits">
-			<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-			<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+			<ol>
+				<li>Footer: </li>
+				<li>Slidewhow:</li>
+				<li>Footer:</li>
+				<li>Feature: </li>
+				<li>Contact Page: </li>
+				<li>CSS Sprite: </li>
+				<li>Canvas Element</li>
+				<li>Video element: </li>
+				<li>Audio element: </li>
+				<li>Use a web font: main header, my name uses a web font from Google</li>
+				<li>HTML 5 form validation: </li>
+				<li>JSON implementation: see example #5 (schools I've attended overlaid on a Google Map)</li>
+				<li>Server-side persistent storage: all the samples are stored in a SQLite database</li>
+			</ol>
 		</div>
 		
 		
@@ -106,10 +128,10 @@
 	
 <!-- Footer -->
 	<div class="navbar">
- 		<a href="../index.html" target="_blank" class="active">Home</a>
-		<a href="index.html" target="_blank">About</a>
-		<a href="../feature/index.html" target="_blank">Feature</a>
-		<a href="../contact/index.html" target="_blank">Contact</a>
+ 		<a href="../index.html" class="active">Home</a>
+		<a href="../about/index.html">About</a>
+		<a href="../feature/index.html">Feature</a>
+		<a href="index.html">Contact</a>
 		<p class="copyright">&copy; 2020 Brenda Canales</p>
 	</div>
 	

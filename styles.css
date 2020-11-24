@@ -176,8 +176,8 @@ img {
 /*--Slideshow--*/
 .slider {
   	position: relative;
-	width: 864px;
-    height: 486px;
+	width: 828px;
+    height: 535px;
 	margin: 0 auto;
 }
 
@@ -209,22 +209,22 @@ img {
 }
 
 .slideshow li:nth-child(1) span { 
-    background-image: url("img/Design/UST/ust-statefair-ad.jpg");
+    background-image: url("img/slideshow_mms.jpg");
 }
 .slideshow li:nth-child(2) span { 
-    background-image: url("img/Production Artist/Projects/large_186642_ub3n7sonscnyllbdrx3rloxlk.jpg");
+    background-image: url("img/slideshow_hebrewnat_ad.jpg");
     animation-delay: 6s; 
 }
 .slideshow li:nth-child(3) span { 
-    background-image: url("img/Web Design/HTML Emails/186642_mqvihv_ie0ikr9qbnucjl9dhj.jpg");
+    background-image: url("img/slideshow_mm_coupon.jpg");
     animation-delay: 12s; 
 }
 .slideshow li:nth-child(4) span { 
-    background-image: url("img/Design/UST/ust-statefair-ad.jpg");   
+    background-image: url("img/slideshow_pfchanges_vday.jpg");   
     animation-delay: 18s; 
 }
 .slideshow li:nth-child(5) span { 
-    background-image: url("img/Design/UST/ust-statefair-ad.jpg");
+    background-image: url("img/slideshow_ust_example.jpg");
     animation-delay: 24s; 
 }
 
@@ -430,9 +430,14 @@ top: 0px;
 	padding: 0 20px;
 }
 
+.sub-title {
+	width: 200px;
+    height: 50px;
+    color: #808080;
+	
+}
+
 /*--End of Feature Page--*/
-
-
 
 
 /* Three image containers (use 25% for four, and 50% for two, etc) */
@@ -498,7 +503,7 @@ top: 0px;
 
 .form-style-9 li.full-width  {
 	display: block;
-	width: 100%%;
+	width: 100%;
 }
 
 .form-style-9 li.full-width input {
@@ -527,7 +532,7 @@ top: 0px;
 }
 .form-style-9 ul li input[type="button"]:hover, 
 .form-style-9 ul li input[type="submit"]:hover {
-	background: linear-gradient(to bottom, #2D77A2 5%, #337DA8 100%);
+	background: linear-gradient(to bottom, #383838 5%, #383838 100%);
 	background-color: #808080;
 }
 
@@ -548,6 +553,9 @@ figure {
 	color: red;
 }
 
+.bonus-material {
+	padding: 50px;
+}
 
 /*--End of Contact Page--*/
 
