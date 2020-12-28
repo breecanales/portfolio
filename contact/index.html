@@ -8,26 +8,6 @@
     <link rel="stylesheet" href="../styles.css" />
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
 
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-      crossorigin=""
-    />
-
-    <!-- Make sure you put this AFTER Leaflet's CSS -->
-    <script
-      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-      crossorigin=""
-    ></script>
-
-    <style>
-      #issMap {
-        height: 400px;
-        width: 600px;
-      }
-    </style>
   </head>
 
   <body>
@@ -51,18 +31,8 @@
         <nav class="main-nav">
           <ul>
             <li><a href="./">Home</a></li>
-            <li>
-              <a href="../about/index.html">About</a>
-              <ul class="sub-menu">
-                <li><a href="../about/index.html#content">Content</a></li>
-                <li><a href="../about/index.html#wireframes">Wireframes</a></li>
-                <li>
-                  <a href="../about/index.html#walkthrough">Walkthrough</a>
-                </li>
-                <li><a href="../about/index.html#credits">Credits</a></li>
-              </ul>
-            </li>
             <li><a href="../feature/index.html">Feature</a></li>
+            <li><a href="../resume/index.html">Resume</a></li>
             <li><a href="../contact/index.html">Contact</a></li>
           </ul>
         </nav>
@@ -171,184 +141,13 @@
     </form>
 
     <!-- End of Form -->
-
-    <!-- CSS sprite -->
-    <br /><br /><br /><br />
-    <div class="flex-item">
-      <p>Bonus Material</p>
-    </div>
-
-    <div class="bonus-material">
-      <div id="cssSprite" class="sub-title">
-        <h3>CSS Sprite</h3>
-      </div>
-
-      <style>
-        ul.menu {
-          list-style-type: none;
-        }
-        ul.menu li {
-          padding: 5px;
-          font-size: 16px;
-          font-family: "Trebuchet MS", Arial, sans-serif;
-        }
-        ul.menu li a {
-          height: 50px;
-          line-height: 50px;
-          display: inline-block;
-          padding-left: 70px; /* To sift text off the background-image */
-          color: #808080;
-          text-decoration: none;
-          background: url("../shield_sprite.png") no-repeat; /* As all link share the same background-image */
-        }
-
-        ul.menu li.shield1 a {
-          background-position: 0 0;
-        }
-        ul.menu li.shield2 a {
-          background-position: 0 -50px;
-        }
-        ul.menu li.shield3 a {
-          background-position: 0 -100px;
-        }
-        ul.menu li.shield4 a {
-          background-position: 0 -150px;
-        }
-
-        ul.menu li.shield1 a:hover {
-          background-position: 0 -50px;
-        }
-        ul.menu li.shield2 a:hover {
-          background-position: 0 -100px;
-        }
-        ul.menu li.shield3 a:hover {
-          background-position: 0 -150px;
-        }
-        ul.menu li.shield4 a:hover {
-          background-position: 0 -50px;
-        }
-      </style>
-
-      <ul class="menu">
-        <li class="shield1"><a href="#">Shield PMS 2607C</a></li>
-        <li class="shield2"><a href="#">Shield PMS 2587C</a></li>
-        <li class="shield3"><a href="#">Shield PMS 2592C</a></li>
-        <li class="shield4"><a href="#">Shield PMS 2577C</a></li>
-      </ul>
-      <br /><br />
-      <!-- CSS sprite end -->
-      <hr />
-      <!-- canvas element -->
-      <div id="canvaselement" class="sub-title">
-        <h3>Canvas Element</h3>
-      </div>
-
-      <p>Image:</p>
-      <img
-        id="shield"
-        src="../img/shield-img.jpg"
-        alt="purple shield"
-        width="200"
-        height="300"
-      />
-
-      <p>Canvas to fill:</p>
-      <canvas
-        id="myCanvas"
-        width="275"
-        height="325"
-        style="border: 1px solid #d3d3d3"
-      >
-        Your browser does not support the HTML canvas tag.</canvas
-      >
-
-      <p><button onclick="myCanvas()">Try it</button></p>
-
-      <script>
-        function myCanvas() {
-          var c = document.getElementById("myCanvas");
-          var ctx = c.getContext("2d");
-          var img = document.getElementById("shield");
-          ctx.drawImage(img, 10, 10);
-        }
-      </script>
-      <br /><br />
-      <hr />
-      <!-- end canvas element -->
-
-      <!-- Audio element -->
-      <div id="audioelement" class="sub-title">
-        <h3>Audio Element</h3>
-      </div>
-
-      <img
-        src="../img/j-balvin-colores.jpg"
-        alt="J Balvin Colores Album"
-        width="200"
-        height="80"
-      />
-      <h5>J Balvin: Colores (Negro)</h5>
-
-      <figure>
-        <figcaption>Listen to my favorite song:</figcaption>
-        <br />
-        <audio controls src="../audio/Negro.mp3">
-          Your browser does not support the
-          <code>audio</code> element.
-        </audio>
-      </figure>
-    </div>
-
-    <!-- end Audio element -->
-
-    <!-- JSON element -->
-
-    <div class="sub-title">
-      <h3>JSON Impementation</h3>
-    </div>
-
-    <h1>Where is the ISS?</h1>
-    <p>latitude: <span id="lat"></span></p>
-    <p>longitude: <span id="lon"></span></p>
-
-    <div id="issMap"></div>
-
-    <script>
-      const mymap = L.map("issMap").setView([0, 0], 1);
-      const marker = L.marker([0, 0]).addTo(mymap);
-
-      const attribution =
-        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
-
-      const tileUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
-      const tiles = L.tileLayer(tileUrl, { attribution });
-      tiles.addTo(mymap);
-
-      const api_url = "https://api.wheretheiss.at/v1/satellites/25544";
-
-      async function getIss() {
-        const response = await fetch(api_url);
-        const data = await response.json();
-        const { latitude, longitude } = data;
-
-        marker.setLatLng([latitude, longitude]);
-
-        document.getElementById("lat").textContent = latitude;
-        document.getElementById("lon").textContent = longitude;
-      }
-
-      getIss();
-    </script>
-
-    <!-- end JSON element -->
-
     <br /><br /><br /><br /><br />
 
     <!-- Footer -->
     <div class="navbar">
       <a href="../home.html" class="active">Home</a>
-      <a href="../about/index.html">About</a>
       <a href="../feature/index.html">Feature</a>
+      <a href="../resume/index.html">Resume</a>
       <a href="../contact/index.html">Contact</a>
       <p class="copyright">&copy; 2020 Brenda Canales</p>
     </div>
